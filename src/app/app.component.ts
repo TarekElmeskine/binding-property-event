@@ -6,10 +6,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  evens = [];
+  evens: number[] = [];
+  odds: number[] = [];
 
-  onStart(event) {
-    console.log('increment: '+event.increment);
-    this.evens.push(event.increment);
+  onStart(event: number) {
+    event % 2 === 0 ? this.evens.push(event) : this.odds.push(event);
   }
 }

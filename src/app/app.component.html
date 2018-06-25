@@ -1,4 +1,13 @@
 <div class="container">
-  <app-game-control (startEvent)="onStart($event)"></app-game-control>
-  <app-even *ngFor="let even of evens">{{even}}</app-even>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (startEvent)="onStart($event)"></app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-even *ngFor="let even of evens" [even]="even"></app-even>
+      <app-odd *ngFor="let odd of odds" [odd]="odd"></app-odd>
+    </div>
+  </div>
 </div>
